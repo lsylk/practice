@@ -40,6 +40,7 @@ def all_odd(numbers):
     for num in numbers:
 
         if num % 2 != 0:
+
             odd_nums.append(num)
 
     return odd_nums
@@ -60,7 +61,9 @@ def all_even(numbers):
     even_nums = []
 
     for num in numbers:
+
         if num % 2 == 0:
+
             even_nums.append(num)
 
     return even_nums
@@ -142,7 +145,7 @@ def long_words(words):
 
     # return long_words
 
-    return [word for word in words if len(word) > 4]
+    return [word for word in words if len(word) > 4]  # list comprehension
 
 
 def n_long_words(words, n):
@@ -298,9 +301,11 @@ def sum_numbers(numbers):
     """
 
     if numbers == []:
+
         return 0
 
     else:
+
         total = 0
 
         for num in numbers:
@@ -358,7 +363,9 @@ def join_strings(words):
     joined_words = ""
 
     for word in words:
+
         joined_words += word
+
     return joined_words
 
 
@@ -385,6 +392,7 @@ def average(numbers):
     sum_numbers = 0
 
     for num in numbers:
+
         sum_numbers += num
 
     average_total = float(sum_numbers) / len(numbers)
@@ -412,9 +420,13 @@ def join_strings_with_comma(words):
     words_string = ""
 
     for word in words:
+
         if word == words[(len(words) - 1)]:
+
             words_string += word
+
         else:
+
             words_string += word + ", "
 
     return words_string
@@ -448,6 +460,7 @@ def foods_in_common(foods1, foods2):
 
     """
     foods1 = set(foods1)
+
     foods2 = set(foods2)
 
     foods = foods1.intersection(foods2)
@@ -537,6 +550,7 @@ def duplicates(items):
     word_count = {}
 
     for item in items:
+
         if item not in word_count:
 
             word_count[item] = 1
@@ -585,11 +599,16 @@ def find_letter_indices(words, letter):
     indices = []
 
     for word in words:
+
         if letter in word:
+
             for i in range(len(word)):
+
                 if word[i] == letter:
+
                     indices.append(i)
         else:
+
             indices.append(None)
 
     return indices
